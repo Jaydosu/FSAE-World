@@ -308,6 +308,6 @@ def scrape_next_n(n):
     with open("results.json", "w") as f:
         json.dump(e_results, f, indent=4)
 
-scrape_next_n(2)
+scrape_next_n(50)
 print("Latest scrape complete.\nLatest team ID scraped: {} - {}".format(max(result["uni_id"] for result in e_results.values()), teams[max(result["uni_id"] for result in e_results.values())]))
 print("Size of results:", len(e_results))
